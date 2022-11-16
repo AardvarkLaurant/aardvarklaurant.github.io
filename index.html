@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- 
+DOCTYPE declaration always comes first. Any other code, like this comment, must follow it. Comments also don't have to be within the HTML root element.
+
+https://developer.mozilla.org/en-US/docs/Glossary/Doctype
+-->
+<html>
+<!-- 
+HyperText Markup Language document / root element 
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html
+-->
+<head>
+<!--
+The Head tag contains metadata about the document. Nothing in here will be rendered, and it only accepts certain types of elements. 
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head
+-->
+
+
+    <meta charset="utf-8">
+<!-- 
+Placing the Meta tag listing character encoding first helps browsers safely render the page. You should always have this tag. 
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset 
+-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 
+The Meta tag for viewport ensures the page always fits the screen (provided none of your content overflows). The one here is the most common, and usually doesn't need to be changed. You should always have this tag. 
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag 
+-->
+
+    <title>Example Page</title>
+<!-- This is the document title. This appears in browser tabs, is the default name for a bookmark, and is read out loud by screen readers. You should always have this tag. 
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title 
+-->
+
+<!-- Social media meta tags -->
+</head>
+
+<!-- 
+The Body tag contains all of the document's content.
+
+Generally you want your document's structure to be as simple as possible. The hierarchy
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body
+-->
+<body>
+<!-- 
+Site headers usually contain the site's branding (name or logo), as well as the site's primary navigation menu. Sometimes they will also contain a search form.
+-->
+<header id="site-header">
+
+<!--
+The Navigation tag <nav> identifies a region of the page used for navigation (either to other pages or within the current page).
+-->
+    <nav id="site-navigation">
+        <ul>
+            <li><a href="/some-page">Some Page</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!--
+The Main tag identifies the main region of content in the document.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+-->
+<main id="content">
+
+    <!--
+    The article element identifies a standalone piece of content in the document (think article of clothing, not news article). Usually, you won't want too many of these.
+    -->
+    <article>
+        <!-- 
+        Every page should have a H1 tag with content similar to or the same as the Title tag.
+
+        Usually you want it inside your Main element instead of your site header, because it should describe what is on the specific page, not your site. 
+
+        Always use headings in descending order.
+
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements 
+        -->
+        <h1>Web Dev Basics</h1>
+
+        <figure>
+<!--
+Embedding images directly from other websites is bad practice, so we're hosting the image ourselves.
+
+Source: https://images-assets.nasa.gov/image/KSC-20221116-PH-ILW01_0023/KSC-20221116-PH-ILW01_0023~orig.jpg
+-->
+            <img src="/img/image-name.jpb">
+<!-- 
+Some tags don't need to be closed. The Image tag <img>, the Input tag <input>, the Horizontal Rule tag <hr>, and the Line Break tag <br> are the most common self-closing tags.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input (Don't bother with inputs and forms until you need them)
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br
+-->
+        </figure>
+    
+        <!--
+        P elements contain paragraphs of text. Sometimes they'll contain other things, but this is rare, and there are usually better elements to contain these things.
+
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+        -->
+        <p>We'll show you how to build <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> web pages and how to <span style="font-weight: bold;">build them well</span>.</p>
+
+        <p>Here's an outline of the basics:</p>
+
+        <!--
+        The Unordered List tag <ul> denotes unordered lists. The Ordered List tag <ol> denotes ordered lists. Their direct descendane must be List Item elements <li>.
+        -->
+        <ol>
+            <li><a href="using-github-pages">Using GitHub Pages</a></li>
+            <li><a href="#tools">Tools</a><ol>
+                <li><a href="#inspector">Inspector</a></li>
+                <li><a href="#chrome-extension">Chrome Extension</a></li>
+            </ol></li>
+            <li><a href="#styling">Styling</a><ol>
+                <li><a href="#layout">Layout</a></li>
+                <li><a href="#text-styles">Text Styles</a></li>
+            </ol>
+            </li>
+            <li><a href="#scripts">Scripts</a></li>
+        </ol>
+
+        <h2 id="tools">Tools</h2>
+
+        <h3 id="inspector">Inspector</h3>
+
+        <h3 id="inspector">Chrome Extension</h3>
+
+        <h2 id="styling">Styling</h2>
+
+        <p>Styling is done in CSS.</p>
+        <p>Layout in HTML is usually straightforward.</p>
+
+        <h3 id="layout">Layout</h3>
+
+        <h3 id="text-styles">Text Styles</h3>
+
+        <h2 id="scripts">Scripts</h2>
+    </article>
+</main>
+
+<!-- 
+Site footers are usually used as an extended site directory.
+-->
+<footer id="site-footer">
+    
+</footer>
+
+</body>
+</html>
