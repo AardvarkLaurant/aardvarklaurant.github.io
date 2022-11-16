@@ -4,6 +4,12 @@ DOCTYPE declaration always comes first. Any other code, like this comment, must 
 
 https://developer.mozilla.org/en-US/docs/Glossary/Doctype
 -->
+<!--
+TLDR: Everything is wrapped in tags. Different tags do different things. Tags have attributes that can change their meaning, appearance, and behavior. Browsers build a tree of tags to represent the document structure, and then applies styles to the tree's nodes (tags), and then loads scripts (JavaScript) that can act on the document.
+
+For more on how it works:
+https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work
+-->
 <html>
 <!-- 
 HyperText Markup Language document / root element 
@@ -72,28 +78,28 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
 -->
 <main id="content">
 
-    <!--
-    The article element identifies a standalone piece of content in the document (think article of clothing, not news article). Usually, you won't want too many of these.
-    -->
+<!--
+The article element identifies a standalone piece of content in the document (think article of clothing, not news article). Usually, you won't want too many of these.
+-->
     <article>
-        <!-- 
-        Every page should have a H1 tag with content similar to or the same as the Title tag.
 
-        Usually you want it inside your Main element instead of your site header, because it should describe what is on the specific page, not your site. 
+<!-- 
+Every page should have a H1 tag with content similar to or the same as the Title tag.
 
-        Always use headings in descending order.
+Usually you want it inside your Main element instead of your site header, because it should describe what is on the specific page, not your site. 
 
-        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements 
-        -->
-        <h1>Web Dev Basics</h1>
+Always use headings in descending order.
 
-        <figure>
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements 
+-->
+<h1>Web Dev Basics</h1>
+
 <!--
 Embedding images directly from other websites is bad practice, so we're hosting the image ourselves.
 
 Source: https://images-assets.nasa.gov/image/KSC-20221116-PH-ILW01_0023/KSC-20221116-PH-ILW01_0023~orig.jpg
 -->
-            <img src="/img/image-name.jpb">
+        <img src="/img/image-name.jpb">
 <!-- 
 Some tags don't need to be closed. The Image tag <img>, the Input tag <input>, the Horizontal Rule tag <hr>, and the Line Break tag <br> are the most common self-closing tags.
 
@@ -105,20 +111,26 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br
 -->
-        </figure>
     
-        <!--
-        P elements contain paragraphs of text. Sometimes they'll contain other things, but this is rare, and there are usually better elements to contain these things.
+<!--
+P elements contain paragraphs of text. Sometimes they'll contain other things, but this is rare, and there are usually better elements to contain these things.
 
-        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
-        -->
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+-->
         <p>We'll show you how to build <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> web pages and how to <span style="font-weight: bold;">build them well</span>.</p>
+<!--
+Anchor, Span.
+-->
 
         <p>Here's an outline of the basics:</p>
 
-        <!--
-        The Unordered List tag <ul> denotes unordered lists. The Ordered List tag <ol> denotes ordered lists. Their direct descendane must be List Item elements <li>.
-        -->
+<!--
+The Ordered List tag <ol> denotes ordered lists. The Unordered List tag <ul> denotes unordered lists. Their direct descendants must be List Item elements <li>.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
+-->
         <ol>
             <li><a href="using-github-pages">Using GitHub Pages</a></li>
             <li><a href="#tools">Tools</a><ol>
@@ -135,6 +147,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br
 
         <h2 id="tools">Tools</h2>
 
+        <p>The tools you need for basic web development, besides a text editor, are built right into your browser.</p>
+
         <h3 id="inspector">Inspector</h3>
 
         <h3 id="inspector">Chrome Extension</h3>
@@ -142,9 +156,10 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br
         <h2 id="styling">Styling</h2>
 
         <p>Styling is done in CSS.</p>
-        <p>Layout in HTML is usually straightforward.</p>
 
         <h3 id="layout">Layout</h3>
+
+        <p>Layout in HTML is usually straightforward.</p>
 
         <h3 id="text-styles">Text Styles</h3>
 
@@ -153,11 +168,14 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br
 </main>
 
 <!-- 
-Site footers are usually used as an extended site directory.
+Site footers are usually used as an extended site directory. Sometimes they also display copyright notices.
 -->
 <footer id="site-footer">
     
 </footer>
 
+<!--
+It's usually good practice to place your scripts before the closing body tag; this allows your page to render first. Other times, you'll want to place your scripts in the <head> element. For example, the script snippets Google Analytics gives you are placed in the <head> element.
+-->
 </body>
 </html>
