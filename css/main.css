@@ -57,7 +57,7 @@ a:hover, a:focus {
 
 ::-webkit-scrollbar-thumb {
 	background: gray;
-	background-radius: 8px;
+	border-radius: 8px;
 }
 
 @media (prefers-reduced-motion: reduce) {
