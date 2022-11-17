@@ -1,0 +1,39 @@
+html {
+	font-family: sans-serif;
+	font-size: 1rem;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #121212;
+	color: #ffffff;
+	line-height: 1.5;
+	margin: 0;
+}
+
+article {
+	margin: 0 auto; /* Centers the element */
+	max-width: 768px;
+}
+
+p, img, h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 1rem;
+}
+
+a {
+	color: #4eb5ff;
+	transition: color .3s ease;
+}
+
+a:hover, a:focus {
+	color: #00f3ff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  a {
+  	transition: none!important;
+  }
+}
