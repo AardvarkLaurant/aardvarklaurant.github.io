@@ -5,7 +5,7 @@ DOCTYPE declaration always comes first. Any other code, like this comment, must 
 https://developer.mozilla.org/en-US/docs/Glossary/Doctype
 -->
 <!--
-TLDR: Everything is wrapped in tags. Different tags do different things. Tags have attributes that can change their meaning, appearance, and behavior. Browsers build a tree of tags to represent the document structure, and then applies styles to the tree's nodes (tags), and then loads scripts (JavaScript) that can act on the document.
+TLDR: Everything is wrapped in tags. Different tags do different things. Tags have attributes that change their behavior. Browsers build a tree of tags to represent the document structure, and then applies styles to the tree's nodes (tags), and then loads scripts (JavaScript) that can act on the document through the tree.
 
 For more on how it works:
 https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work
@@ -22,7 +22,6 @@ The Head tag contains metadata about the document. Nothing in here will be rende
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head
 -->
-
 
     <meta charset="utf-8">
 <!-- 
@@ -46,6 +45,8 @@ This is the document title. This appears in browser tabs, is the default name fo
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title 
 -->
+    
+    <link rel="shortcut icon" type="image/png" href="img/FaviconCollins.gif">
     
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
