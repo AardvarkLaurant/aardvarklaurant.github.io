@@ -14,7 +14,7 @@ body {
 #site-header {
 	display: flex;
 	gap: 1rem;
-	padding: 1.5rem .5rem;
+	padding: 1.5rem;
 }
 
 #site-navigation ul {
@@ -34,6 +34,10 @@ article {
 
 p, ul, ol, img, h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 1rem;
+}
+
+h1 {
+	font-size: 2.5rem;
 }
 
 a {
