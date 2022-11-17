@@ -191,6 +191,14 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
         
         <p>Scripts.</p>
         
+        <ul class="list-group">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+        
         <h2 id="using-github-pages">Using GitHub Pages</h2>
         
         <p>Using Github Pages is simple.</p>
@@ -217,5 +225,14 @@ Site footers are usually used as an extended site directory. Sometimes they also
 <!--
 It's usually good practice to place your scripts before the closing body tag; this allows your page to render first. Other times, you'll want to place your scripts in the <head> element. For example, the script snippets Google Analytics gives you are placed in the <head> element.
 -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    const listGroup = document.querySelector( '.list-group' );
+    const sortOptions = {
+		animation: 200,
+		direction: 'vertical'
+	}
+	Sortable.create( listGroup, sortOptions );
+</script>
 </body>
 </html>
